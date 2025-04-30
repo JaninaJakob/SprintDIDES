@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calm Down</title>
+  <link rel="stylesheet" href="calmdown.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="overlay"></div>
+    <div class="overlay2"></div>
+    <div class="overlay3"></div>
+    <div class="overlay4"></div>
+  
+    <div class="text-vertical calm" id="calm-text">
+      <div class="wave">C</div>
+      <div class="wave">A</div>
+      <div class="wave">L</div>
+      <div class="wave">M</div>
+    </div>
+    
+    <div class="text-vertical down">
+      <div class="wave">D</div>
+      <div class="wave">O</div>
+      <div class="wave">W</div>
+      <div class="wave">N</div>
+    </div>
+    
+    <button class="play-button">
+      <img src="schallplatte.gif" alt="Play" />
+    </button>
+    
+    <audio id="audio-player" src="calm_down.mp3"></audio>
+    
+
+  </div>
+<script>
+    const audio = document.getElementById("audio-player");
+    const playButton = document.querySelector(".play-button");
+    const textContainers = document.querySelectorAll(".text-vertical");
+    const calmText = document.querySelector(".text-vertical.calm");
+    const oElement = document.querySelector('.text-vertical.down .wave:nth-child(2)');
+
+    let isPlaying = false;
+
+    playButton.addEventListener("click", () => {
+      isPlaying = !isPlaying;
+
+      if (isPlaying) {
+        audio.currentTime = 0;
+        audio.play();
+
+        textContainers.forEach(el => el.classList.add("animate"));
+        calmText.classList.add("animate"); // Calm Bewegung
+        oElement.classList.add("rotate");  // O drehen
+      } else {
+        audio.pause();
+        audio.currentTime = 0;
+
+        textContainers.forEach(el => el.classList.remove("animate"));
+        calmText.classList.remove("animate"); // Calm Bewegung stoppen
+        oElement.classList.remove("rotate");  // O stoppen
+      }
+    });
+  </script>
+  
+  
+  
+</body>
+</html>

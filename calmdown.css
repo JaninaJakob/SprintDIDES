@@ -1,0 +1,99 @@
+/* Schrift bewegt sich in Wellenformen*/
+   /* === ANIMATIONEN === */
+
+   @keyframes wave {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+
+  @keyframes moveCalmDown {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(90px); }
+  }
+
+  .animate .wave {
+    animation: wave 1.1s ease-in-out infinite; /* Geschwindigkeit Calm Down Bewegung */
+  }
+
+  .animate .wave:nth-child(1) { animation-delay: 0s; }
+  .animate .wave:nth-child(2) { animation-delay: 0.1s; }
+  .animate .wave:nth-child(3) { animation-delay: 0.2s; }
+  .animate .wave:nth-child(4) { animation-delay: 0.3s; }
+
+
+
+
+
+  @keyframes moveCalm {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(20px); /* Bewegung nach unten */
+    }
+  }
+  
+  /* Nur das Calm-Container soll bewegt werden */
+  .move-calm {
+    animation: moveCalm 5s ease-in-out infinite;
+  }
+  
+  /* Bestehende Wave Animation für Buchstaben */
+  @keyframes waveAnimation {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(6px); }
+    100% { transform: translateY(0); }
+  }
+  
+  .wave {
+    display: inline-block;
+    animation: waveAnimation 2s ease-in-out infinite;
+  }
+ 
+  
+  /* Handy */
+@media (max-width: 430px) {
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .container {
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .text-vertical {
+    font-size: 60px;
+    letter-spacing: 2px;
+  }
+
+  .play-button.active {
+    transform: scale(2.5);
+  }
+
+  .play-button img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (hover: hover) {
+  .play-button:hover {
+    transform: scale(3.2);
+
+  }
+}  
+
+  /* Laptop – Hover aktiv */
+@media (min-width: 431px) {
+  .play-button:hover {
+    transform: scale(3.2);
+  }
+}
+  
+
+
+

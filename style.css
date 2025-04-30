@@ -1,0 +1,112 @@
+body {
+      margin: 0;
+      font-family: sans-serif;
+      overflow: hidden; /* Verhindert Scrollen */
+    }
+
+    .container { /* Hintergrundbild */
+      position: relative; 
+      width: 100vw;
+      height: 100vh;
+      background-image: url('Palme.jpeg'); 
+      background-size: cover;
+      background-position: bottom, center; /* Bei Laptopgrösse der Ausschnitt des Bildes */
+      overflow: hidden; /* Verhindert Scrollen */
+    }
+
+    .overlay { /* Farbverlauf links*/
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100px;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(255, 230, 0, 0.2), rgba(255, 180, 0, 0.2), rgba(255, 130, 20, 0.2));
+
+    }
+
+    .overlay2 { /* Farbverlauf rechts*/
+      position: absolute;
+      top: 0;
+      left: 100px; /* Abstand von der linken Seite */
+      width: 100px;
+      height: 200%;
+      background: linear-gradient(to bottom, rgba(255, 100, 50, 0.2), rgba(220, 40, 30, 0.2), rgba(160, 0, 0, 0.2));
+    }
+
+    .overlay3 { /* Horizontaler Verlauf ganz unten, von links nach rechts */
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100vw;
+      height: 200px;
+      background: linear-gradient(to bottom, rgba(255, 230, 0, 0.2), rgba(255, 180, 0, 0.2), rgba(255, 130, 20, 0.2));
+      z-index: 1;
+    }
+
+    .overlay4 { /* Zweiter Verlauf darüber */
+      position: absolute;
+      bottom: 200px; /* direkt über overlay3 */
+      left: 0;
+      width: 100vw;
+      height: 200px;
+      background: linear-gradient(to bottom, rgba(255, 100, 50, 0.2), rgba(220, 40, 30, 0.2), rgba(160, 0, 0, 0.2));
+      z-index: 2;
+    }
+
+
+
+    /* Texte Vertikal */
+
+    .text-vertical { /* Beide Texte Vertikal */
+      position: absolute;
+      top: 0;
+      left: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* Mittig zur Höhe */
+      height: 100%;
+      font-size: 100px;
+      color: white;
+      font-weight: bold;
+      letter-spacing: 5px;
+      align-items: center; /* Zentriert den Text */
+      z-index: 10;
+    }
+
+    .text-vertical.calm {
+      left: 7px; /* erste Spalte links */
+      z-index: 10;
+    }
+
+    .text-vertical.down {
+      left: 103px; /* zweite Spalte etwas weiter rechts */
+      top: auto;
+      bottom: 20px;
+      justify-content: flex-end;
+    }
+
+   
+
+    .play-button { /* Play-Button */
+      position: absolute;
+      top: 60px;
+      right: 40px;
+      width: 70px;
+      height: 70px;
+      background: transparent; /* Kein weißer Hintergrund */
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      padding: 0;
+    
+    }
+
+    .play-button img { /* Gif Schalplatte */
+      width: 200px;
+      height: 200px;
+      object-fit: contain;
+      pointer-events: none; /* falls nötig */
+    }
