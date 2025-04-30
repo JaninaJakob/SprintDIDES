@@ -63,14 +63,14 @@
 
         textContainers.forEach(el => el.classList.add("animate"));
         calmText.classList.add("animate"); // Calm Bewegung
-        oElement.classList.add("rotate");  // O drehen
+      
       } else {
         audio.pause();
         audio.currentTime = 0;
 
         textContainers.forEach(el => el.classList.remove("animate"));
         calmText.classList.remove("animate"); // Calm Bewegung stoppen
-        oElement.classList.remove("rotate");  // O stoppen
+    
       }
     });
   </script>
