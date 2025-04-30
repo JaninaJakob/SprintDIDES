@@ -73,7 +73,9 @@
   .play-button.active {
     transform: scale(2.5);
   }
-
+  .play-button-scale {
+    transform: scale(2);
+  }
   .play-button img {
     width: 120px;
     height: 120px;

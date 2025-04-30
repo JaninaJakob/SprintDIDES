@@ -48,7 +48,12 @@
     const oElement = document.querySelector('.text-vertical.down .wave:nth-child(2)');
 
     let isPlaying = false;
-
+    playButton.addEventListener("touchend", () => {
+      playButton.classList.add("play-button-scale");
+      setTimeout(() => {
+        playButton.classList.remove("play-button-scale");
+      }, 300);
+    });
     playButton.addEventListener("click", () => {
       isPlaying = !isPlaying;
 

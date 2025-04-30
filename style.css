@@ -7,7 +7,7 @@ body {
     .container { /* Hintergrundbild */
       position: relative; 
       width: 100vw;
-      height: 100vh;
+      height: 100dvh;
       background-image: url('Palme.jpeg'); 
       background-size: cover;
       background-position: bottom, center; /* Bei Laptopgrösse der Ausschnitt des Bildes */
