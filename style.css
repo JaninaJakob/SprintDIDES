@@ -10,7 +10,7 @@ body {
       height: 100dvh;
       background-image: url('Palme.jpeg'); 
       background-size: cover;
-      background-position: bottom, center; /* Bei Laptopgrösse der Ausschnitt des Bildes */
+      background-position: center, center; /* Bei Laptopgrösse der Ausschnitt des Bildes */
       overflow: hidden; /* Verhindert Scrollen */
     }
 
@@ -58,6 +58,7 @@ body {
     /* Texte Vertikal */
 
     .text-vertical { /* Beide Texte Vertikal */
+      font-family: 'IBM Plex Mono', monospace;
       position: absolute;
       top: 0;
       left: 10px;
@@ -74,12 +75,12 @@ body {
     }
 
     .text-vertical.calm {
-      left: 7px; /* erste Spalte links */
+      left: 19px; /* erste Spalte links */
       z-index: 10;
     }
 
     .text-vertical.down {
-      left: 103px; /* zweite Spalte etwas weiter rechts */
+      left: 119px; /* zweite Spalte etwas weiter rechts */
       top: auto;
       bottom: 20px;
       justify-content: flex-end;
