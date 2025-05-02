@@ -107,14 +107,14 @@
     letter-spacing: 40px;
     flex-direction: row;
     transform: translateX(220px);
-    top: 140px;
+    top: 160px;
     bottom: auto;
   }
 
   .text-vertical.down {
     flex-direction: row;
     left: 640px;
-    top: 345px;
+    top: 355px;
     letter-spacing: 40px;
     transform: translateX(100px);
   }
