@@ -108,7 +108,7 @@
     flex-direction: row;
     transform: translateX(220px);
     top: 100px;
-    bottom: auto;
+    bottom: 40px;
   }
 
   .text-vertical.down {
@@ -117,6 +117,7 @@
     top: 305px;
     letter-spacing: 40px;
     transform: translateX(100px);
+    bottom: 20px;
   }
 
   .play-button {
