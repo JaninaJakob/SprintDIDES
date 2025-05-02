@@ -103,7 +103,7 @@
   }
 
   .text-vertical.calm {
-    left: 250px;
+    left: 150px;
     letter-spacing: 40px;
     flex-direction: row;
     transform: translateX(220px);
@@ -113,7 +113,7 @@
 
   .text-vertical.down {
     flex-direction: row;
-    left: 600px;
+    left: 640px;
     top: 330px;
     letter-spacing: 40px;
     transform: translateX(100px);
