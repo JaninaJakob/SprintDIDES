@@ -96,26 +96,26 @@
   }
 }
 
- /* Laptop – CALM DOWN und Schalplatte */
+ /* Laptop Anpassungen – CALM DOWN, Schalplatte, Balken */
  @media (min-width: 1024px) {
   .wave {
     font-size: 170px;
   }
 
   .text-vertical.calm {
-    left: 160px;
-    letter-spacing: 30px;
+    left: 250px;
+    letter-spacing: 40px;
     flex-direction: row;
     transform: translateX(220px);
-    top: 90px;
+    top: 125px;
     bottom: auto;
   }
 
   .text-vertical.down {
     flex-direction: row;
-    left: 700px;
-    top: 290px;
-    letter-spacing: 30px;
+    left: 600px;
+    top: 330px;
+    letter-spacing: 40px;
     transform: translateX(100px);
   }
 
@@ -123,7 +123,7 @@
     position: absolute;
     top: 5px;
     right: 5px;
-    width: 300px;   /* größerer Container */
+    width: 260px;   /* größerer Container */
     height: 300px;
     display: flex;
     align-items: center;
@@ -145,6 +145,26 @@
     transform: scale(1.8);
     transition: transform 0.3s ease;
   }
+
+  .overlay { /* Farbverlauf links*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 230, 0, 0.2), rgba(255, 180, 0, 0.2), rgba(255, 130, 20, 0.2));
+
+  }
+
+  .overlay2 { /* Farbverlauf rechts*/
+    position: absolute;
+    top: 0;
+    left: 150px; /* Abstand von der linken Seite */
+    width: 150px;
+    height: 200%;
+    background: linear-gradient(to bottom, rgba(255, 100, 50, 0.2), rgba(220, 40, 30, 0.2), rgba(160, 0, 0, 0.2));
+  }
+  
 }
 }
 
