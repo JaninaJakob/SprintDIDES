@@ -95,7 +95,57 @@
     transform: scale(3.2);
   }
 }
-  
 
+ /* Laptop – CALM DOWN und Schalplatte */
+ @media (min-width: 1024px) {
+  .wave {
+    font-size: 170px;
+  }
+
+  .text-vertical.calm {
+    left: 160px;
+    letter-spacing: 30px;
+    flex-direction: row;
+    transform: translateX(220px);
+    top: 90px;
+    bottom: auto;
+  }
+
+  .text-vertical.down {
+    flex-direction: row;
+    left: 700px;
+    top: 290px;
+    letter-spacing: 30px;
+    transform: translateX(100px);
+  }
+
+  .play-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 300px;   /* größerer Container */
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    padding: 0;
+    z-index: 20;
+  }
+
+  .play-button img {
+    width: 140%;     /* passt sich dem Button an */
+    height: 140%;
+    object-fit: contain;
+    pointer-events: none;
+  }
+
+  .play-button-scale img {
+    transform: scale(1.8);
+    transition: transform 0.3s ease;
+  }
+}
+}
 
 
